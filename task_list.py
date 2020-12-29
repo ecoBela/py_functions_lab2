@@ -49,12 +49,27 @@ def time_taken(tasks, time):
 print("TIME TAKEN TASKS")
 time_taken(tasks, 20)
 
-# for task in tasks:
-#     if task["time_taken"] < 20:
-#         print(task)
+
 
 # Print any task with a given description 
 
-# for task in tasks:
-#     if task["description"] == 'Wash Dishes':
-#         print(task)
+def contains_given_desc(tasks, desc):
+    for task in tasks:
+        if task["description"] == desc:
+            print(task)
+print("TASK WITH GIVEN DESC")
+contains_given_desc(tasks, "Clean Windows")
+contains_given_desc(tasks, "Feed Cat")
+contains_given_desc(tasks, "Make Dinner")
+
+# Extension
+# Given a description update that task to mark it as complete.
+def mark_as_completed(tasks, desc):
+    for task in tasks:
+        if task["description"] == desc:
+            task["completed"] = True
+
+mark_as_completed(tasks, "Feed Cat")
+print("MARK AS COMPLETED")
+mark_as_completed(tasks, "Wash Dishes")
+print(tasks)
