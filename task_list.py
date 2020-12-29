@@ -15,7 +15,7 @@ def uncompleted_tasks(tasks):
             print(task["description"])
     print(uncompleted)
 
-uncompleted_tasks(tasks)
+# uncompleted_tasks(tasks)
 
 # Print a list of completed tasks -
 
@@ -27,8 +27,8 @@ def completed(tasks):
             print(task["description"])
     return completed
 
-print("Completed")
-completed(tasks)
+# print("Completed")
+# completed(tasks)
 
 
 # Print a list of all task descriptions - 
@@ -37,8 +37,8 @@ def task_descriptions(tasks):
     for task in tasks:
         print(task["description"])
 
-print("TASK DESCRIPTIONS")
-task_descriptions(tasks)
+# print("TASK DESCRIPTIONS")
+# task_descriptions(tasks)
 
 # Print a list of tasks where time_taken is at least a given time - print (if time_taken >= 0)
 def time_taken(tasks, time):
@@ -46,8 +46,8 @@ def time_taken(tasks, time):
         if task["time_taken"] > time:
             print(task)
 
-print("TIME TAKEN TASKS")
-time_taken(tasks, 20)
+# print("TIME TAKEN TASKS")
+# time_taken(tasks, 20)
 
 
 
@@ -57,10 +57,10 @@ def contains_given_desc(tasks, desc):
     for task in tasks:
         if task["description"] == desc:
             print(task)
-print("TASK WITH GIVEN DESC")
-contains_given_desc(tasks, "Clean Windows")
-contains_given_desc(tasks, "Feed Cat")
-contains_given_desc(tasks, "Make Dinner")
+# print("TASK WITH GIVEN DESC")
+# contains_given_desc(tasks, "Clean Windows")
+# contains_given_desc(tasks, "Feed Cat")
+# contains_given_desc(tasks, "Make Dinner")
 
 # Extension
 # Given a description update that task to mark it as complete.
@@ -69,7 +69,12 @@ def mark_as_completed(tasks, desc):
         if task["description"] == desc:
             task["completed"] = True
 
-mark_as_completed(tasks, "Feed Cat")
-print("MARK AS COMPLETED")
-mark_as_completed(tasks, "Wash Dishes")
+# mark_as_completed(tasks, "Feed Cat")
+# print("MARK AS COMPLETED")
+# mark_as_completed(tasks, "Wash Dishes")
+# print(tasks)
+
+print(len(tasks))
+tasks.append({"description": "Tidy Toys", "completed": False, "time_taken": 15 })
 print(tasks)
+print(len(tasks))
